@@ -1,5 +1,12 @@
-"<div style='border: 8px dashed black'>
-<img src='http://bit.ly/1eze8aE'>
-</div>"
+<h1>My name is <%= @name %></h1>
 
-<h1>My name is <%= ["Amigo", "Oscar", "Shitbag"].sample %></h1>
+<% if @name.nil? %>
+<form action="/named-cat">
+    <input type="text" name="name">
+    <input type = "submit" value="Submit">
+</form>
+<% end %>
+
+<div style='border: 8px dashed black; width: 454'>
+<img src='http://bit.ly/1eze8aE'>
+</div>
