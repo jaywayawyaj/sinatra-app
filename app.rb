@@ -26,8 +26,12 @@ get '/random-cat' do
   erb(:index)
 end
 
-get '/named-cat' do
-  p params
+post '/named-cat' do
   @name = params[:name]
   erb(:index)
+end
+
+
+get '/post-cat' do
+  erb(:form)
 end
